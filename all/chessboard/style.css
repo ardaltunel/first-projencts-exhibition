@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    background: #FFEBC9;
+    font-family: 'roboto', sans-serif;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.chess {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 20px;
+}
+
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    width: 600px;
+    height: 600px;
+    background: #F4DFD0;
+    border-left: 25px rgba(176,91,59,.5) solid;
+    border-top: 25px rgba(176,91,59,.7) solid;
+    border-right: 25px rgba(176,91,59,.85) solid;
+    border-bottom: 25px rgba(176,91,59,.7) solid;
+    box-shadow: 0 0 25px 0 rgba(176,91,59,0.5);
+
+}
+
+.chess-board__a,
+.chess-board__b,
+.chess-board__c,
+.chess-board__d,
+.chess-board__e,
+.chess-board__f,
+.chess-board__g,
+.chess-board__h {
+    display: grid;
+    grid-template-rows: repeat(8, 12.5%);
+}
+
+.odd div:nth-of-type(odd),
+.even div:nth-of-type(even) {
+    background: #a96348;
+}
+
+.a1,
+.b1,
+.c1,
+.d1,
+.e1,
+.f1,
+.g1,
+.h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.a1 {
+    justify-content: space-between;
+}
+
+.a1,
+.c1,
+.e1,
+.g1,
+.a3,
+.a5,
+.a7 {
+    color: #F4DFD0;
+}
+
+.b1,
+.d1,
+.f1,
+.h1,
+.a2,
+.a4,
+.a6,
+.a8 {
+    color: #B05B3B;
+}
+
+.number {
+    align-self: flex-start;
+}
+
+
+.input-output {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.input-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-field__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F4DFD0;
+    padding: 100px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(176,91,59,0.1);
+}
+
+.input-field__form input {
+    margin: 15px 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(176,91,59,0.1);
+}
+
+.input-field__form label {
+    color: #B05B3B;
+    font-size: 20px;
+}
+
+.input-text {
+    color: #B05B3B;
+    font-family: 'roboto', sans-serif;
+    font-size: 21px;
+    width: 25px;
+}
+
+.input-btn {
+    color: #F4DFD0;
+    background: #B05B3B;
+    width: 150px;
+    font-family: 'roboto', sans-serif;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.output-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.output-field__textsField {
+    background: #F4DFD0;
+    height: 175px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    border-radius: 15px;
+}
+
+.output-field__textsField > * {
+    scroll-snap-align: start;
+}
+
+.output-field__textsField::-webkit-scrollbar {
+    display: none;
+}
+
+.output-field__texts {
+    color: #B05B3B;
+    text-align: center;
+    padding: 75px;
+    height: 25px;
+    font-size: 30px;
+}
+
+.output-field__scrollDown {
+    margin-top: -25px;
+    margin-bottom: 55px;
+    z-index: 1;
+}
+
+.output-field__clearBtn {
+    border: none;
+    color: #F4DFD0;
+    background: #B05B3B;
+    width: 150px;
+    font-family: 'roboto', sans-serif;
+    font-size: 21px;
+    outline: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(176,91,59,0.1);
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media all and (max-width: 780px){
+    .chess-board{
+        width: 300px;
+        height: 300px;
+        border-left: 10px rgba(176,91,59,.5) solid;
+        border-top: 10px rgba(176,91,59,.7) solid;
+        border-right: 10px rgba(176,91,59,.85) solid;
+        border-bottom: 10px rgba(176,91,59,.7) solid;
+        box-shadow: 0 0 10px 0 rgb(176 91 59 / 50%);
+    }
+    .chess {
+        font-size: 10px;
+    }
+
+    .output-field__texts {
+        padding: 75px;
+        font-size: 10px;
+    }
+
+    .output-field__scrollDown{
+        margin-top: -70px;
+        font-size: 10px;
+    }
+
+    .output-field__clearBtn{
+        width: 100px;
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .input-field__form{
+        padding: 30px 20px;
+    }
+
+    .input-field__form label{
+        font-size: 13px;
+    }
+
+    .input-field__form input{
+        padding: 10px;
+        font-size: 10px;
+    }
+}

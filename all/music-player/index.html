@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div id="app-cover">
+  <div id="bg-artwork"></div>
+  <div id="bg-layer"></div>
+  <div id="player">
+    <div id="player-track">
+      <div id="album-name"></div>
+      <div id="track-name"></div>
+      <div id="track-time">
+        <div id="current-time"></div>
+        <div id="track-length"></div>
+      </div>
+      <div id="s-area">
+        <div id="ins-time"></div>
+        <div id="s-hover"></div>
+        <div id="seek-bar"></div>
+      </div>
+    </div>
+    <div id="player-content">
+      <div id="album-art">
+        <img src="https://i.scdn.co/image/ab67616d00001e024e2dfbb14d1e3d1a6c62c120" class="active" id="_1">
+        <img src="https://i.scdn.co/image/ab67616d00001e0250ff619db8f157cfa85c557a" id="_2">
+        <img src="https://i.scdn.co/image/ab67616d00001e02b200cbbd0c3e0ca354bb1beb" id="_3">
+        <img src="https://i.scdn.co/image/ab67616d00001e02fda764e0a334756b49002b10" id="_4">
+        <img src="https://i.scdn.co/image/ab67616d00001e0205d935af6ee598171fcb08b7" id="_5">
+        <div id="buffer-box">Buffering...</div>
+      </div>
+      <div id="player-controls">
+        <div class="control">
+          <div class="button" id="play-previous">
+            <i class="fas fa-backward"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-pause-button">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-next">
+            <i class="fas fa-forward"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

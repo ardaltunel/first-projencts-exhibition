@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Chessboard</title>
+</head>
+<body>
+<main class="chess">
+    <div class="chess-board">
+        <div class="chess-board__a even">
+            <div class="a8">
+                <span class="number">8</span>
+            </div>
+            <div class="a7">
+                <span class="number">7</span>
+            </div>
+            <div class="a6">
+                <span class="number">6</span>
+            </div>
+            <div class="a5">
+                <span class="number">5</span>
+            </div>
+            <div class="a4">
+                <span class="number">4</span>
+            </div>
+            <div class="a3">
+                <span class="number">3</span>
+            </div>
+            <div class="a2">
+                <span class="number">2</span>
+            </div>
+            <div class="a1">
+                <span class="number">1</span>
+                A
+            </div>
+        </div>
+        <div class="chess-board__b odd">
+            <div class="b8"></div>
+            <div class="b7"></div>
+            <div class="b6"></div>
+            <div class="b5"></div>
+            <div class="b4"></div>
+            <div class="b3"></div>
+            <div class="b2"></div>
+            <div class="b1">
+                B
+            </div>
+        </div>
+        <div class="chess-board__c even">
+            <div class="c8"></div>
+            <div class="c7"></div>
+            <div class="c6"></div>
+            <div class="c5"></div>
+            <div class="c4"></div>
+            <div class="c3"></div>
+            <div class="c2"></div>
+            <div class="c1">
+                C
+            </div>
+        </div>
+        <div class="chess-board__d odd">
+            <div class="d8"></div>
+            <div class="d7"></div>
+            <div class="d6"></div>
+            <div class="d5"></div>
+            <div class="d4"></div>
+            <div class="d3"></div>
+            <div class="d2"></div>
+            <div class="d1">
+                D
+            </div>
+        </div>
+        <div class="chess-board__e even">
+            <div class="e8"></div>
+            <div class="e7"></div>
+            <div class="e6"></div>
+            <div class="e5"></div>
+            <div class="e4"></div>
+            <div class="e3"></div>
+            <div class="e2"></div>
+            <div class="e1">
+                E
+            </div>
+        </div>
+        <div class="chess-board__f odd">
+            <div class="f8"></div>
+            <div class="f7"></div>
+            <div class="f6"></div>
+            <div class="f5"></div>
+            <div class="f4"></div>
+            <div class="f3"></div>
+            <div class="f2"></div>
+            <div class="f1">
+                F
+            </div>
+        </div>
+        <div class="chess-board__g even">
+            <div class="g8"></div>
+            <div class="g7"></div>
+            <div class="g6"></div>
+            <div class="g5"></div>
+            <div class="g4"></div>
+            <div class="g3"></div>
+            <div class="g2"></div>
+            <div class="g1">
+                G
+            </div>
+        </div>
+        <div class="chess-board__h odd">
+            <div class="h8"></div>
+            <div class="h7"></div>
+            <div class="h6"></div>
+            <div class="h5"></div>
+            <div class="h4"></div>
+            <div class="h3"></div>
+            <div class="h2"></div>
+            <div class="h1">
+                H
+            </div>
+        </div>
+    </div>
+</main>
+<aside class="input-output">
+    <div class="output-field">
+        <div class="output-field__textsField">
+            <div class="output-field__texts" id="first">Bishop at A3</div>
+            <div class="output-field__texts" id="second">Then to D5</div>
+            <div class="output-field__texts" id="last">Lastly to H7</div>
+        </div>
+        <span class="output-field__scrollDown">SCROLL DOWN</span>
+        <button id="clear-btn" class="output-field__clearBtn" type="reset">CLEAR</button>
+    </div>
+    <div class="input-field">
+        <form class="input-field__form">
+            <label for="start">Enter Starting </label>
+            <input type="text" id="start" class="input-text" name="start" minlength="2" maxlength="2" size="1">
+            <label for="target">Enter Target </label>
+            <input type="text" id="target" class="input-text" name="target" minlength="2" maxlength="2" size="1">
+            <input type="submit" id="submit-button" class="input-btn" value="SIMULATE">
+        </form>
+    </div>
+
+</aside>
+</body>
+</html>
