@@ -83,6 +83,54 @@
             justify-content: center;
             align-items: center;
         }
+
+        .iconwrapper a{
+            text-decoration: none;
+        }
+
+        .iconwrapper a:hover{
+            color: #3e3939;
+        }
+
+        .menuwrapper ul li a{
+            text-decoration: none;
+        }
+
+        .menuwrapper ul li a:hover{
+            color: #3e3939;
+        }
+
+        .buttonwrapper a{
+            text-decoration: none;
+        }
+
+        .buttonwrapper a:hover{
+            color: #3e3939;
+        }
+
+        .rotatedwrapper a{
+            text-decoration: none;
+        }
+
+        .rotatedwrapper a:hover{
+            color: #3e3939;
+        }
+
+        .container a{
+            text-decoration: none;
+        }
+
+        .container a:hover{
+            color: #3e3939;
+        }
+
+        .pagefivethree a{
+            text-decoration: none;
+        }
+
+        .pagefivethree a:hover{
+            color: #3e3939;
+            }
         
         .iconwrapper {
             width: 100px;
@@ -535,7 +583,7 @@
         .swiper-rtl {
             display: none;
         }
-
+       
         .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
             content: 'next';
             font-size: 30px;
@@ -569,9 +617,7 @@
             margin: auto;
             width: 80%;
             height: 120px;
-            background-color: white;
-            color: #000000;
-            opacity: 0.2;
+            color: black;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -583,7 +629,6 @@
         .dresses:hover {
             opacity: 1;
             transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
-            border-top: 1px solid black;
         }
         
         .dresses_image {
@@ -594,16 +639,26 @@
             position: absolute;
             margin-right: 600px;
             transform: rotate(-10deg);
+            opacity: 0;
+            z-index: 1;
         }
-        
+
+        .dresses:hover .dresses_image {
+            transition: .3s;
+            opacity: 1;
+        }
+
+        .dresses:hover .menu_button{
+            transition: .3s;
+            opacity: 1;
+        }
+
         .trousers {
             position: relative;
             margin: auto;
             width: 80%;
             height: 120px;
-            background-color: white;
             color: #000000;
-            opacity: 0.4;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -611,12 +666,13 @@
             border-top: 1px solid black;
             border-bottom: 1px solid black;
         }
-        
+
         .trousers:hover {
             opacity: 1;
             transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+            border-top: 1px solid black;
         }
-        
+
         .trousers_image {
             width: 200px;
             height: 200px;
@@ -625,6 +681,18 @@
             position: absolute;
             margin-right: 600px;
             transform: rotate(-10deg);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .trousers:hover .trousers_image {
+            transition: .3s;
+            opacity: 1;
+        }
+
+        .trousers:hover .menu_button{
+            transition: .3s;
+            opacity: 1;
         }
         
         .pants {
@@ -632,9 +700,7 @@
             margin: auto;
             width: 80%;
             height: 120px;
-            background-color: white;
             color: #000000;
-            opacity: 0.4;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -656,16 +722,27 @@
             position: absolute;
             margin-right: 600px;
             transform: rotate(-10deg);
+            opacity: 0;
+            z-index: 1;
         }
+
+        .pants:hover .pants_image{
+            transition: .3s;
+            opacity: 1;
+        }
+
+        .pants:hover .menu_button{
+            transition: .3s;
+            opacity: 1;
+        }
+
         
         .shirts {
             position: relative;
             margin: auto;
             width: 80%;
             height: 120px;
-            background-color: white;
             color: #000000;
-            opacity: 0.4;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -677,7 +754,6 @@
         .shirts:hover {
             opacity: 1;
             transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
-            border-bottom: 1px solid black;
         }
         
         .shirts_image {
@@ -688,7 +764,19 @@
             position: absolute;
             margin-right: 600px;
             transform: rotate(-10deg);
+            opacity: 0;
         }
+
+        .shirts:hover .shirts_image{
+            transition: .3s;
+            opacity: 1;
+        }
+
+        .shirts:hover .menu_button{
+            transition: .3s;
+            opacity: 1;
+        }
+
         
         .menu_button {
             width: 60px;
@@ -701,6 +789,7 @@
             align-items: center;
             justify-content: center;
             font-size: 26px;
+            opacity: 0;
         }
         /* page 4 */
         
@@ -815,7 +904,7 @@
         
         .fontseven {
             padding-top: 30px;
-            font: 13px Black;
+            font: 13px;
         }
         
         .fonttenwra {
@@ -913,6 +1002,16 @@
             padding-bottom: 10px;
             border-bottom: 2px solid black;
         }
+
+        .feedback-input{
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            opacity: 30;
+            outline: 0;
+            border: 0;
+        }
+
 
         .page-five__button{
             height: 40px;
