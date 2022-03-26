@@ -568,6 +568,10 @@
             align-items: center;
             color: #828282;
         }
+
+        .swiper-button-next{
+            top: 100%;
+}
         
         .swiper-button-next,
         .swiper-rtl {
