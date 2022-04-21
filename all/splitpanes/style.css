@@ -1,0 +1,1116 @@
+    body {
+        margin: 0;
+        height: 100%;
+        background: #141826;
+    }
+
+    .ufak-yazi.renk_kirmizi{color: #fa4d56;}
+    .ufak-yazi.renk_yesil{color: #00B464;}
+
+      .main {
+        width: 100%;
+        height: 90rem;
+        max-height: 90rem;
+        background-color: #141826;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 60px;
+        text-align: center;
+        color: #FFF;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        color: #FFF;
+    }
+
+    h3 a {
+        color: #FFF;
+    }
+
+    a {
+        color: #FFF;
+    }
+
+    h1 {
+        margin-top: 100px;
+        text-align:center;
+        font-size:60px;
+        line-height: 70px;
+        font-family: 'Bree Serif', 'serif';
+    }
+
+    #container {
+        margin: 0 auto;
+        max-width: 890px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .toggle,
+    [id^=drop] {
+        display: none;
+    }
+
+    /* Giving a background-color to the nav container. */
+    nav {
+        margin:0;
+        padding: 0;
+        background-color: #141826;
+    }
+
+    #logo {
+        display: block;
+        padding: 0 30px;
+        float: left;
+        font-size:20px;
+    }
+
+    /* Since we'll have the "ul li" "float:left"
+     * we need to add a clear after the container. */
+
+    nav:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+
+    /* Removing padding, margin and "list-style" from the "ul",
+     * and adding "position:reltive" */
+    nav ul {
+        display: flex;
+        align-items: center;
+        padding:0px;
+        margin:0px;
+        list-style: none;
+        position: relative;
+    }
+
+    /* Positioning the navigation items inline */
+    nav ul li {
+        margin: 0px;
+        display:inline-block;
+        float: left;
+        background-color: #141826;
+    }
+
+    /* Styling the links */
+    nav a {
+        display:block;
+        padding:20px 20px;
+        color:#FFF;
+        font-size:13px;
+        text-decoration:none;
+    }
+
+
+    nav ul li ul li:hover { background: #000000; }
+
+    /* Background color change on Hover */
+    nav a:hover {
+        background-color: #000000;
+    }
+
+    /* Hide Dropdowns by Default
+     * and giving it a position of absolute */
+    nav ul ul {
+        display: none;
+        position: absolute;
+    }
+
+    /* Display Dropdowns on Hover */
+    nav ul li:hover > ul {
+        display:inherit;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        width:170px;
+        float:none;
+        display:list-item;
+        position: relative;
+    }
+
+    /* Second, Third and more Tiers
+     * We move the 2nd and 3rd etc tier dropdowns to the left
+     * by the amount of the width of the first tier.
+    */
+    nav ul ul ul li {
+        position: relative;
+        top:-60px;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+        left:170px;
+    }
+
+
+    /* Media Queries
+    --------------------------------------------- */
+
+    @media all and (max-width : 768px) {
+
+        #logo {
+            display: block;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
+
+        nav {
+            margin: 0;
+        }
+
+        /* Hide the navigation menu by default */
+        /* Also hide the  */
+        .toggle + a,
+        .menu {
+            display: none;
+        }
+
+        /* Stylinf the toggle lable */
+        .toggle {
+            display: block;
+            background-color: #254441;
+            padding:14px 20px;
+            color:#FFF;
+            font-size:17px;
+            text-decoration:none;
+            border:none;
+        }
+
+        .toggle:hover {
+            background-color: #000000;
+        }
+
+        /* Display Dropdown when clicked on Parent Lable */
+        [id^=drop]:checked + ul {
+            display: block;
+        }
+
+        /* Change menu item's width to 100% */
+        nav ul li {
+            display: block;
+            width: 100%;
+        }
+
+        nav ul ul .toggle,
+        nav ul ul a {
+            padding: 0 40px;
+        }
+
+        nav ul ul ul a {
+            padding: 0 80px;
+        }
+
+        nav a:hover,
+        nav ul ul ul a {
+            background-color: #000000;
+        }
+
+        nav ul li ul li .toggle,
+        nav ul ul a,
+        nav ul ul ul a{
+            padding:14px 20px;
+            color:#FFF;
+            font-size:17px;
+        }
+
+
+        nav ul li ul li .toggle,
+        nav ul ul a {
+            background-color: #212121;
+        }
+
+        /* Hide Dropdowns by Default */
+        nav ul ul {
+            float: none;
+            position:static;
+            color: #ffffff;
+            /* has to be the same number as the "line-height" of "nav a" */
+        }
+
+        /* Hide menus on hover */
+        nav ul ul li:hover > ul,
+        nav ul li:hover > ul {
+            display: none;
+        }
+
+        /* Fisrt Tier Dropdown */
+        nav ul ul li {
+            display: block;
+            width: 100%;
+        }
+
+        nav ul ul ul li {
+            position: static;
+            /* has to be the same number as the "width" of "nav ul ul li" */
+
+        }
+
+    }
+
+    @media all and (max-width : 330px) {
+
+        nav ul li {
+            display:block;
+            width: 94%;
+        }
+
+    }
+
+    nav ul li a i{
+        float: right;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition:  0.3s ease-out;
+        transition:  0.3s ease-out;
+    }
+
+    nav ul li:hover a i{
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+
+    .botwrapper{
+        font-size: 20px;
+    }
+    
+    .panel-left {
+        flex: 0 0 auto;
+        padding: 10px;
+        width: 300px;
+        min-height: 200px;
+        min-width: 150px;
+        white-space: nowrap;
+        background: #141826
+        color: white;
+
+    }
+    
+    .splitter {
+        flex: 0 0 auto;
+        width: 18px;
+        background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+        min-height: 200px;
+        cursor: col-resize;
+    }
+    
+    .splitpanes__pane {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+        position: relative;
+    }
+    
+    em.specs {
+        font-size: 0.2em;
+        line-height: 1;
+        position: absolute;
+        color: #bbb;
+        bottom: 0.5em;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    
+    html,
+    body,
+    #app {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 5em;
+    }
+    
+    p {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        color: #666;
+        z-index: 10;
+        font-size: 12px;
+    }
+    
+    p a {
+        color: inherit;
+    }
+    
+    .splitpanes.default-theme .splitpanes__pane {
+        background-color: #141826;
+    }
+    
+    .splitpanes.default-theme .splitpanes__splitter {
+        background-color: #252944;
+    }
+    
+    .default-theme.splitpanes--vertical>.splitpanes__splitter,
+    .default-theme .splitpanes--vertical>.splitpanes__splitter {
+        width: 7px;
+        border-left: 1px solid #252944;
+        margin-left: -1px #252944;
+    }
+    
+    .default-theme.splitpanes--horizontal>.splitpanes__splitter,
+    .default-theme .splitpanes--horizontal>.splitpanes__splitter {
+        height: 7px;
+        border-top: 1px solid #252944;
+        margin-top: -1px #252944;
+    }
+
+    .default-theme.splitpanes--vertical>.splitpanes__splitter:before, .default-theme .splitpanes--vertical>.splitpanes__splitter:before{
+        background-color: #252944;
+        opacity: 0.8;
+    }
+
+    .default-theme.splitpanes--vertical>.splitpanes__splitter:after, .default-theme .splitpanes--vertical>.splitpanes__splitter:after{
+        background-color: #252944;
+        opacity: 0.8;
+    }
+
+    .default-theme.splitpanes--horizontal>.splitpanes__splitter:before, .default-theme .splitpanes--horizontal>.splitpanes__splitter:before{
+        background-color: #252944;
+        opacity: 0.8;
+    }
+
+    .default-theme.splitpanes--horizontal>.splitpanes__splitter:after, .default-theme .splitpanes--horizontal>.splitpanes__splitter:after{
+        background-color: #252944;
+        opacity: 0.8;
+    }
+
+    .pc-tab>input,
+    .pc-tab section>div {
+        display: none;
+    }
+    
+    #tab1:checked~section .tab1,
+    #tab2:checked~section .tab2 {
+        display: block;
+    }
+    
+    #tab1:checked~nav .tab1,
+    #tab2:checked~nav .tab2 {
+        color: red;
+    }
+    /* Visual Styles */
+    
+    *,
+    *:after,
+    *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .pc-tab {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .pc-tab ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .pc-tab ul li label {
+        font-family: "Raleway";
+        float: left;
+        padding: 15px 30px;
+        border-bottom: 0;
+        font-size: 15px;
+        height: 40px;
+        background: #eeeeee;
+        color: black;
+    }
+    
+    .pc-tab ul li label:hover {
+        background: white;
+    }
+    
+    .pc-tab ul li label:active {
+        background: #ffffff;
+    }
+    
+    .pc-tab ul li:not(:last-child) label {
+        border-right-width: 0;
+    }
+    
+    .pc-tab section {
+        font-family: "Droid Serif";
+        clear: both;
+    }
+    
+    .pc-tab section div {
+        font-size: 12px;
+        line-height: 1.5em;
+        letter-spacing: 0.3px;
+        color: #fff;
+    }
+    
+    .pc-tab section div h2 {
+        margin: 0;
+        font-family: "Raleway";
+        letter-spacing: 1px;
+        color: #34495e;
+    }
+    
+    #tab1:checked~nav .tab1 label,
+    #tab2:checked~nav .tab2 label {
+        background: white;
+        color: #111;
+    }
+    
+    #tab1:checked~nav .tab1 label:after,
+    #tab2:checked~nav .tab2 label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #ffffff;
+        left: 0;
+        bottom: -1px;
+    }
+    
+    #tab1:checked~section .tab1,
+    #tab2:checked~section .tab2 {
+        display: flex;
+    }
+    
+    .tab1 a {
+        text-decoration: none;
+        margin: 3px;
+    }
+    
+    .tab2 a {
+        text-decoration: none;
+        margin: 3px;
+    }
+    
+    .piyasa {
+        border: 1px solid #074285;
+        font-family: sans-serif;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .stop-limit {
+        border: 1px solid #074285;
+        font-family: sans-serif;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .tetik-emir {
+        border: 1px solid #074285;
+        font-family: sans-serif;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .price {
+        border: 1px solid #074285;
+        font-family: sans-serif;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .total {
+        border: 1px solid #074285;
+        font-family: sans-serif;
+        margin: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    #tab1:checked~nav .tab1 label,
+    #tab2:checked~nav .tab2 label {
+        background-color: #1a1f35;
+        color: white;
+    }
+    
+    #tab1:checked~nav .tab1 label:after,
+    #tab2:checked~nav .tab2 label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: none;
+        left: 0;
+        bottom: -1px;
+    }
+    
+    .accordion-tabs {
+        display: none;
+    }
+    
+    .accordion-tabs :focus {
+        outline: none;
+    }
+    
+    .accordion-item {
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .accordion-item:last-child {
+        border: none;
+    }
+    
+    .accordion-item__label {
+        margin: 0;
+        padding: 1.25rem;
+        cursor: pointer;
+        transition: padding 0.2s ease;
+        position: relative;
+        font-size: 12px; width: 100%; line-height: 1.5em; letter-spacing: 0.3px; color: #fff; font-family: droit;
+    }
+    
+    .accordion-item__label:after {
+        content: "";
+        height: 4px;
+        width: 4px;
+        position: absolute;
+        top: -4px;
+        right: 1.25rem;
+        bottom: 0;
+        margin: auto;
+        border: 3px solid transparent;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        border-color: transparent #447fff #447fff transparent;
+        opacity: 1;
+        transition: opacity 0.1s ease;
+    }
+    
+    .accordion-item__label:hover {
+        background: #d3e1ff;
+    }
+    
+    .accordion-item__container {
+        padding: 0 1.25em;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: padding 0.2s ease, opacity 0.5s 0.15s ease;
+    }
+    
+    .accordion-active {
+        background: rgba(68, 127, 255, 0.1);
+    }
+    
+    .accordion-active .accordion-item__label {
+        padding-bottom: 0;
+        cursor: inherit;
+    }
+    
+    .accordion-active .accordion-item__label:hover {
+        background: none;
+    }
+    
+    .accordion-active .accordion-item__label:after {
+        opacity: 0;
+    }
+    
+    .accordion-active .accordion-item__container {
+        padding: 1.25em;
+        height: auto;
+        opacity: 1;
+    }
+    
+    .accordion-active .accordion-item__container p:first-child,
+    .accordion-active .accordion-item__container h1:first-child,
+    .accordion-active .accordion-item__container h2:first-child,
+    .accordion-active .accordion-item__container h3:first-child,
+    .accordion-active .accordion-item__container h4:first-child,
+    .accordion-active .accordion-item__container h5:first-child,
+    .accordion-active .accordion-item__container h6:first-child {
+        margin-top: 0;
+    }
+    
+    .accordion-active .accordion-item__container p:last-child,
+    .accordion-active .accordion-item__container h1:last-child,
+    .accordion-active .accordion-item__container h2:last-child,
+    .accordion-active .accordion-item__container h3:last-child,
+    .accordion-active .accordion-item__container h4:last-child,
+    .accordion-active .accordion-item__container h5:last-child,
+    .accordion-active .accordion-item__container h6:last-child {
+        margin-bottom: 0;
+    }
+    
+    @media (min-width: 600px) {
+        .accordion-tabs {
+            display: flex;
+            background: rgba(68, 127, 255, 0.1);
+        }
+        .accordion-tabs .accordion-tab {
+            background: #b7e0fa;
+            padding: 1rem 2rem;
+            font: inherit;
+            flex: 1;
+            border: none;
+            cursor: pointer;
+            transition: background 0.1s ease;
+        }
+        .accordion-tabs .accordion-tab:hover {
+            background: rgba(249, 249, 249, 0.01);
+        }
+        .accordion-tabs .accordion-tab:last-child {
+            border-right: 0;
+        }
+        .accordion-tabs .accordion-tab.accordion-active {
+            background: #5bbdde;
+        }
+        .accordion-item {
+            display: none;
+            border: none;
+            background: #141826;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .accordion-item__label,
+        .accordion-item__container {
+            padding: 0;
+            transition: inherit;
+        }
+        .accordion-item.accordion-active {
+            display: block;
+        }
+        .accordion-item.accordion-active .accordion-item__container {
+            padding: 0;
+        }
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .accordion {
+        border-radius: none;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .accordion+p {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 300;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+    }
+    
+    .logowrapper {
+        width: 230px;
+        height: 60px;
+        margin-left: 20px;
+        display: flex;
+        font-size: 30px;
+        line-height: -3px;
+    }
+    
+    i {
+        color: white;
+        font-size: 28px;
+        margin-left: 10px;
+        margin-bottom: 1px;
+    }
+    
+    .botwrapper {
+        width: 200px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .menuwrapper {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .menuicerik {
+        width: 50%;
+        height: 60px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menuyazi {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    ul {
+        text-decoration: none;
+        margin: 0;
+    }
+    
+    li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    
+    .buttonkap {
+        width: 100px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .buttonone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 25px;
+        background-color: #e78c04;
+        border-radius: 5px;
+        font-size: 10px;
+        color: white;
+    }
+
+    .buttonone:hover {
+        background-color: #ff9116;
+    }
+    
+    .menuwrapper {
+        display: flex;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .menuyazi ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        font-family: sans-serif;
+        padding-bottom: 30px;
+        transition: .5s;
+    }
+    
+    .menuyazi ul li a.active {
+        color: #e78c04;
+        border-radius: 10px;
+    }
+    
+    .menuyazi ul li a:hover {
+        color: #e78c04;
+        border-radius: 10px;
+    }
+    
+    .menu-bar .fa-solid {
+        margin-right: 10px;
+    }
+    
+    .menu-1 {
+        display: none;
+    }
+    
+    .menu-2 {
+        display: none;
+    }
+    
+    .menu-3 {
+        display: none;
+    }
+    
+    .menuyazi ul li:hover .menu-1 {
+        display: block;
+        position: absolute;
+        background: rgb(247, 247, 247);
+        margin-top: 20px;
+        margin-left: -10px;
+        font-size: 10px;
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    .menuyazi ul li:hover .menu-2 {
+        display: block;
+        position: absolute;
+        background: rgb(247, 247, 247);
+        margin-top: 20px;
+        margin-left: -10px;
+        font-size: 10px;
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    .menuyazi ul li:hover .menu-3 {
+        display: block;
+        position: absolute;
+        background: rgb(247, 247, 247);
+        margin-top: 20px;
+        margin-left: -10px;
+        font-size: 10px;
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    .menuyazi ul li:hover .menu-1 ul {
+        display: block;
+    }
+    
+    .menuyazi ul li:hover .menu-2 ul {
+        display: block;
+    }
+    
+    .menuyazi ul li:hover .menu-3 ul {
+        display: block;
+    }
+    
+    .menuyazi ul li:hover .menu-1 ul li {
+        width: 105px;
+        display: block;
+        padding: 20px;
+        background: transparent;
+        text-align: center;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    
+    .menuyazi ul li:hover .menu-2 ul li {
+        width: 110px;
+        display: block;
+        padding: 20px;
+        background: transparent;
+        text-align: center;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    
+    .menuyazi ul li:hover .menu-3 ul li {
+        width: 125px;
+        display: block;
+        padding: 20px;
+        background: transparent;
+        text-align: center;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    
+    .menuyazi ul li:hover .menu-1 ul li a:hover {
+        color: #e78c04;
+    }
+    
+    .menuyazi ul li:hover .menu-2 ul li a:hover {
+        color: #e78c04;
+    }
+    
+    .menuyazi ul li:hover .menu-3 ul li a:hover {
+        color: #e78c04;
+    }
+    
+    .accordion-tabs {
+        font-size: 12px;
+    }
+    
+    .ilksira {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .ilksirayazi {
+        font-family: sans-serif;
+    }
+    
+    .ufak-yazi {
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .ufakyazikap {
+        width: 90px;
+        height: 15px;
+        display: flex;
+    }
+    
+    .ufakyazikapi {
+        width: 90px;
+        height: 15px;
+        display: flex;
+        margin-left: 10px;
+    }
+    
+    .ilksira:hover {
+        background-color: #0f121e;
+    }
+
+    .limit{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .limit-one{
+        width: 45%;
+        margin: 10px;
+        margin-bottom: 1px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border-width: 2px;
+        border-style: solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bi {font-size: 13px;}
+    .menu li {z-index: 100;}
+    .menu li ul li {background-color: #141826;}
+
+    ::-webkit-scrollbar{
+        background: #141826;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: #0c0f1a;
+        border-radius: 10px;
+    }
+
+    .hamburger-icon {
+        position: absolute;
+        z-index: 1;
+        top: 5vh;
+        left: 5vw;
+        padding-bottom: 2vh;
+    }
+
+    .hamburger-icon span {
+        height: 5px;
+        width: 40px;
+        background-color: black;
+        display: block;
+        margin: 5px 0px 5px 0px;
+        transition: 0.7s ease-in-out;
+        transform: none;
+        border-radius: 5px;
+    }
+
+    #openmenu:checked ~ .menu-pane {
+        left: -5vw;
+        transform: translateX(-5vw);
+    }
+
+    #openmenu:checked ~ .body-text {
+        display: none;
+    }
+
+    #openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+        transform: translate(0%, 175%) rotate(-45deg);
+        background-color: white;
+    }
+
+    #openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+        transform: rotate(45deg);
+        background-color: white;
+    }
+
+    #openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
+        opacity: 0;
+    }
+
+    #openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
+        opacity: 0;
+    }
+
+    div.menu-pane {
+        background-color: #000;
+        position: absolute;
+        transform: translateX(-105vw);
+        transform-origin: (0, 0);
+        width: 100%;
+        transition: 0.6s ease-in-out;
+    }
+
+    .menu-pane p {
+        color: black;
+        font-size: 0.6em;
+    }
+
+    .menu-pane nav {
+        padding-top: 5%;
+        padding-left: 10%;
+    }
+
+    .menu-links li, a, span {
+        transition: 0.5s ease-in-out;
+    }
+
+    .menu-pane ul {
+        padding-left: 65px;
+        display: inline-grid;
+    }
+
+    .menu-pane li {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        font-size: 1em;
+    }
+
+    .menu-links li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    input.hamburger-checkbox {
+        position: absolute;
+        z-index: 3;
+        top: 5vh;
+        left: 5vw;
+        width: 10vw;
+        opacity: 0;
+        height: 6vh;
+    }
+
+    .menu-pane nav ul li a{
+        font-family: sans-serif;
+        padding: 10px;
+        background: white;
+        color: black;
+        border-radius: 10px;
+    }
+
+    .menu-pane nav ul li a:hover{
+        background: black;
+        color: white;
+    }
